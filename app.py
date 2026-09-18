@@ -47,7 +47,7 @@ st.set_page_config(page_title="Heart Disease Risk Predictor", page_icon="❤️"
 st.title("❤️ Heart Disease Risk Predictor")
 st.caption(
     "A PyTorch neural network trained on the UCI Heart Disease (Cleveland) "
-    "dataset — 83.6% test accuracy, 0.861 F1. For demonstration purposes "
+    "dataset — 85.4% test accuracy, 0.861 F1. For demonstration purposes "
     "only, not a medical device."
 )
 
