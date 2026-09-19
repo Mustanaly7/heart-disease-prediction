@@ -1,15 +1,9 @@
-"""
-Streamlit demo for the Heart Disease Prediction model.
-Run locally with:  streamlit run app.py
-Deploy for free at: https://share.streamlit.io
-"""
 import pickle
 import numpy as np
 import torch
 import torch.nn as nn
 import streamlit as st
 
-# ---- Must match the architecture in train.py exactly ----
 class HeartNet(nn.Module):
     def __init__(self, in_features):
         super().__init__()
