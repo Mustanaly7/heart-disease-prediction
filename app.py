@@ -106,6 +106,3 @@ if submitted:
         st.success(f"✅ Lower predicted risk of heart disease — probability {proba:.1%}")
     st.progress(proba)
     st.caption("Model output is a probability, not a diagnosis.")
-
-st.divider()
-st.markdown("[View source code & training pipeline on GitHub](#)")
