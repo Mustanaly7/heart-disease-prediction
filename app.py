@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import streamlit as st
 
+# ---- Must match the architecture in train.py exactly ----
 class HeartNet(nn.Module):
     def __init__(self, in_features):
         super().__init__()
@@ -41,7 +42,7 @@ st.set_page_config(page_title="Heart Disease Risk Predictor", page_icon="❤️"
 st.title("❤️ Heart Disease Risk Predictor")
 st.caption(
     "A PyTorch neural network trained on the UCI Heart Disease (Cleveland) "
-    "dataset — 85.4% test accuracy, 0.861 F1. For demonstration purposes "
+    "dataset — 83.6% test accuracy, 0.861 F1. For demonstration purposes "
     "only, not a medical device."
 )
 
@@ -100,3 +101,6 @@ if submitted:
         st.success(f"✅ Lower predicted risk of heart disease — probability {proba:.1%}")
     st.progress(proba)
     st.caption("Model output is a probability, not a diagnosis.")
+
+st.divider()
+st.markdown("[View source code & training pipeline on GitHub](#)")
