@@ -39,6 +39,28 @@ def load_model():
 model, scaler, feature_names = load_model()
 
 st.set_page_config(page_title="Heart Disease Risk Predictor", page_icon="❤️")
+
+# --- INJECT CUSTOM CSS TO HIDE GITHUB BADGE & TOOLBAR ---
+st.markdown("""
+<style>
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    
+    .viewerBadge_container__1QSob,
+    .styles_viewerBadge__1yB5_,
+    .viewerBadge_link__1S137,
+    .viewerBadge_text__1JaDK {
+        display: none !important;
+    }
+    
+    div[data-testid="stToolbar"] {
+        display: none !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+# ---------------------------------------------------------
+
 st.title("❤️ Heart Disease Risk Predictor")
 st.caption(
     "A PyTorch neural network trained on the UCI Heart Disease (Cleveland) "
